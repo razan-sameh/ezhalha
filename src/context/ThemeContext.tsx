@@ -1,19 +1,14 @@
-import {
-  AppColors,
-  DARK_COLORS,
-  LIGHT_COLORS,
-  StatusColorPalette,
-  getStatusColors,
-} from "@/constants/theme";
+
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
+    createContext,
+    useCallback,
+    useContext,
+    useEffect,
+    useMemo,
+    useState,
 } from "react";
+import { AppColors, StatusColorPalette, DARK_COLORS, LIGHT_COLORS, getStatusColors } from "../constants/theme";
 
 const THEME_STORAGE_KEY = "@ezhalha/color-scheme";
 

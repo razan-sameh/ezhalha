@@ -1,5 +1,5 @@
-import { ShipmentStatus } from '@/types/shipment';
 import { Platform } from 'react-native';
+import { ShipmentStatus } from '../types/shipment';
 
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';

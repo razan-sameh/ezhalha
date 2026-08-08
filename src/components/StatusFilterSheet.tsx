@@ -1,22 +1,14 @@
-import React, { useMemo } from 'react';
-import {
-  Modal,
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import {
-  ShipmentStatus,
-  STATUS_LABELS,
-  STATUS_ORDER,
-} from '@/types/shipment';
-import { FONT, RADIUS, SPACING } from '@/constants/theme';
-import { useTheme } from '@/context/ThemeContext';
 
-export type StatusFilter = ShipmentStatus | 'all';
+import { Ionicons } from "@expo/vector-icons";
+import React, { useMemo } from "react";
+import { Modal, Pressable, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { RADIUS, SPACING, FONT } from "../constants/theme";
+import { ShipmentStatus } from "../data/shipments";
+import { STATUS_ORDER, STATUS_LABELS } from "../types/shipment";
+import { useTheme } from '../context/ThemeContext';
+
+export type StatusFilter = ShipmentStatus | "all";
 
 interface StatusFilterSheetProps {
   visible: boolean;
@@ -26,7 +18,7 @@ interface StatusFilterSheetProps {
 }
 
 const FILTER_OPTIONS: { value: StatusFilter; label: string }[] = [
-  { value: 'all', label: 'All' },
+  { value: "all", label: "All" },
   ...STATUS_ORDER.map((status) => ({
     value: status,
     label: STATUS_LABELS[status],
@@ -48,7 +40,7 @@ export function StatusFilterSheet({
         overlay: {
           flex: 1,
           backgroundColor: colors.overlay,
-          justifyContent: 'flex-end',
+          justifyContent: "flex-end",
         },
         sheet: {
           backgroundColor: colors.card,
@@ -59,14 +51,14 @@ export function StatusFilterSheet({
           paddingBottom: Math.max(insets.bottom, SPACING.lg),
         },
         sheetHeader: {
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
           marginBottom: SPACING.lg,
         },
         sheetTitle: {
           fontSize: FONT.h2,
-          fontWeight: '700',
+          fontWeight: "700",
           color: colors.textPrimary,
         },
         closeButton: {
@@ -74,12 +66,12 @@ export function StatusFilterSheet({
           height: 32,
           borderRadius: 16,
           backgroundColor: colors.grayLight,
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: "center",
+          justifyContent: "center",
         },
         option: {
-          flexDirection: 'row',
-          alignItems: 'center',
+          flexDirection: "row",
+          alignItems: "center",
           paddingVertical: SPACING.md,
           paddingHorizontal: SPACING.md,
           borderRadius: RADIUS.md,
@@ -100,15 +92,15 @@ export function StatusFilterSheet({
         optionLabel: {
           flex: 1,
           fontSize: FONT.body,
-          fontWeight: '600',
+          fontWeight: "600",
           color: colors.textPrimary,
         },
       }),
-    [colors, insets.bottom]
+    [colors, insets.bottom],
   );
 
   function getDotColor(value: StatusFilter) {
-    if (value === 'all') return colors.gray;
+    if (value === "all") return colors.gray;
     return statusColors[value].dot;
   }
 
@@ -148,7 +140,10 @@ export function StatusFilterSheet({
                 accessibilityLabel={`Filter by ${option.label}`}
               >
                 <View
-                  style={[styles.dot, { backgroundColor: getDotColor(option.value) }]}
+                  style={[
+                    styles.dot,
+                    { backgroundColor: getDotColor(option.value) },
+                  ]}
                 />
                 <Text style={styles.optionLabel}>{option.label}</Text>
                 {isSelected ? (

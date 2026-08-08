@@ -1,6 +1,6 @@
 {
   "name": "ezhalha",
-  "main": "./app/App.tsx",
+  "main": "./App.tsx",
   "version": "1.0.0",
   "scripts": {
     "start": "expo start",

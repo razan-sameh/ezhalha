@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useTheme } from '@/context/ThemeContext';
-import { FONT, SPACING } from '@/constants/theme';
+
+import { Ionicons } from "@expo/vector-icons";
+import React, { useMemo } from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { SPACING, FONT } from "../constants/theme";
+import { useTheme } from '../context/ThemeContext';
 
 interface EmptyStateProps {
   title: string;
@@ -10,15 +11,19 @@ interface EmptyStateProps {
   icon?: keyof typeof Ionicons.glyphMap;
 }
 
-export function EmptyState({ title, subtitle, icon = 'cube-outline' }: EmptyStateProps) {
+export function EmptyState({
+  title,
+  subtitle,
+  icon = "cube-outline",
+}: EmptyStateProps) {
   const { colors } = useTheme();
 
   const styles = useMemo(
     () =>
       StyleSheet.create({
         container: {
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: "center",
+          justifyContent: "center",
           paddingVertical: SPACING.xxl * 2,
           paddingHorizontal: SPACING.xl,
         },
@@ -27,24 +32,24 @@ export function EmptyState({ title, subtitle, icon = 'cube-outline' }: EmptyStat
           height: 56,
           borderRadius: 28,
           backgroundColor: colors.grayLight,
-          alignItems: 'center',
-          justifyContent: 'center',
+          alignItems: "center",
+          justifyContent: "center",
           marginBottom: SPACING.md,
         },
         title: {
           fontSize: FONT.h2,
-          fontWeight: '600',
+          fontWeight: "600",
           color: colors.textPrimary,
           marginBottom: SPACING.xs,
-          textAlign: 'center',
+          textAlign: "center",
         },
         subtitle: {
           fontSize: FONT.small,
           color: colors.textSecondary,
-          textAlign: 'center',
+          textAlign: "center",
         },
       }),
-    [colors]
+    [colors],
   );
 
   return (
