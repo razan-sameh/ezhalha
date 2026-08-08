@@ -108,7 +108,6 @@ export function StatusFilterSheet({
     <Modal
       visible={visible}
       transparent
-      animationType="slide"
       onRequestClose={onClose}
     >
       <Pressable style={styles.overlay} onPress={onClose}>
