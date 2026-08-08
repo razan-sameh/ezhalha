@@ -98,3 +98,20 @@ The project is organized around reusable components, contexts, hooks, screens, a
 * React Navigation
 * AsyncStorage
 * Yarn
+
+## Demo Video
+
+
+https://github.com/user-attachments/assets/04318c43-9250-4ad1-b32d-cee1bf6880a6
+
+
+
+## Screenshots
+<img width="421" height="781" alt="Screenshot 2026-08-08 at 4 47 09 PM" src="https://github.com/user-attachments/assets/ad1920a1-9af5-43a0-ba7c-dc5d1facdc80" />
+<img width="421" height="781" alt="Screenshot 2026-08-08 at 4 42 31 PM" src="https://github.com/user-attachments/assets/016665fe-c5d6-4c84-9492-1f1bf2fec503" />
+<img width="421" height="781" alt="Screenshot 2026-08-08 at 4 42 23 PM" src="https://github.com/user-attachments/assets/ad37c91c-e19f-40b3-a918-94f43f730b76" />
+<img width="421" height="781" alt="Screenshot 2026-08-08 at 4 42 15 PM" src="https://github.com/user-attachments/assets/cd82f7fc-7017-4bda-a01b-5702b8e5f2c2" />
+<img width="421" height="781" alt="Screenshot 2026-08-08 at 4 42 08 PM" src="https://github.com/user-attachments/assets/b9ea0eeb-34a9-4efa-be60-0f5aefc888b4" />
+
+
+
