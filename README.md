@@ -1,50 +1,100 @@
-# Welcome to your Expo app 👋
+# Ezhalha – Shipment Tracker
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile app built with Expo for tracking shipments, viewing shipment details, filtering and searching shipments, and creating new shipments.
 
-## Get started
+## Getting Started
 
-1. Install dependencies
+### Prerequisites
 
-   ```bash
-   npm install
-   ```
+* Node.js
+* Yarn
+* Expo CLI / Expo Go
+* iOS Simulator or Android Emulator
 
-2. Start the app
+### Installation
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+Clone the repository and install the dependencies:
 
 ```bash
-npm run reset-project
+git clone https://github.com/razan-sameh/ezhalha.git
+cd ezhalha
+yarn install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Run on iOS:
 
-## Learn more
+```bash
+yarn ios
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Run on Android:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+yarn android
+```
 
-## Join the community
+You can also scan the QR code using Expo Go to run the app on a physical device.
 
-Join our community of developers creating universal apps.
+## Main Features
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* Shipment list with search
+* Filter shipments by status
+* Pin/unpin shipments
+* Shipment details and tracking timeline
+* Create new shipments
+* Light and dark mode
+* Local persistence for theme and pinned shipments
+* Form validation
+* Responsive mobile UI
+
+## Libraries & Why
+
+### Expo
+
+Used to simplify the React Native development workflow and make it easier to run the application on both iOS and Android.
+
+### React Navigation
+
+Used for stack-based navigation between the shipment list, shipment details, and create shipment screens.
+
+### AsyncStorage
+
+Used for lightweight local persistence, mainly for saving the selected theme and pinned shipments between app sessions.
+
+### @expo/vector-icons
+
+Used for consistent icons throughout the application without adding custom image assets.
+
+
+## Architecture
+
+The project is organized around reusable components, contexts, hooks, screens, and shared constants.
+
+* `screens` – application screens
+* `components` – reusable UI components
+* `context` – global state such as shipments and theme
+* `hooks` – reusable application logic
+* `constants` – theme, spacing, typography, and colors
+* `navigation` – navigation configuration and types
+* `types` – shared TypeScript types
+* `utils` – utility functions
+
+
+## What I Would Add With More Time
+
+* Backend/API integration for real shipment tracking
+* Authentication and user accounts
+* Push notifications for shipment status updates
+* Unit and integration tests
+* Loading, error, and network states
+* React Query for server state management
+* Redux Toolkit for more complex client-side state
+
+## Tech Stack
+
+* React Native
+* Expo
+* TypeScript
+* React Navigation
+* AsyncStorage
+* Yarn
